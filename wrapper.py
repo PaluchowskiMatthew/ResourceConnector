@@ -32,6 +32,14 @@ def scripts():
 
 
 def vararg_callback(option, opt_str, value, parser):
+    """ Option taking a variable number of arguments.
+    Taken from here: https://docs.python.org/2/library/optparse.html#optparse-option-callbacks
+    :param option:
+    :param opt_str:
+    :param value:
+    :param parser:
+    :return:
+    """
     assert value is None
     value = []
 
@@ -58,7 +66,7 @@ def vararg_callback(option, opt_str, value, parser):
 def parse_options():
     """Parser used for script command with all its necessary parameters needed to be run on the cluster
 
-    :return:
+    :return: parsed options and arguments
     """
     parser = OptionParser()
     parser.add_option("-s", "--script-command", dest="script_multiarg",
@@ -69,6 +77,10 @@ def parse_options():
 
 
 def launch_script(command):
+    """
+    Method for script/command launching inside the shell
+    :param command: script which should be run inside the shell
+    """
     app.logger.info('Full command:\n' + command)
 
     process = subprocess.Popen(
@@ -81,10 +93,13 @@ def launch_script(command):
     output = process.communicate()[0]
     app.logger.info('Full commmand output: ' + output)
     process.stdin.close()
-    return
 
 
 def run_flask(debug=False):
+    """
+    Method for launching flask server on available port.
+    :param debug: optional
+    """
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.bind(('localhost', 0))
     port = sock.getsockname()[1]
