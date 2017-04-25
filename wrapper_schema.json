@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "Status",
+    "description": "Class Status of namespace ['bbicconverter','v1']",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "progress": {
+            "type": "integer"
+        },
+        "message": {
+            "type": "string"
+        }
+    }
+}

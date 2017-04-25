@@ -10,16 +10,65 @@ import subprocess
 global script_thread
 script_thread = None
 
+WRAPPER_NAME = 'resourceconnector'
+SCHEMA_FILE = 'wrapper_schema.json'
+
 app = Flask(__name__)
 #Swagger(app)
 
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "Hello World Wide Wrapper!"
 
 
-@app.route('/script_running')
+@app.route('/'+WRAPPER_NAME+'/v1/registry')
+def registry():
+    """Endpoint providing a list of options to be called by the API.
+       ---
+       responses:
+         200:
+           description: Returns a list of options to be called on the API
+           examples: "bbicconverter/v1/status": ["GET"]
+    """
+    return jsonify({"resourceconnector/v1/status": ["GET"]})
+
+
+@app.route('/'+WRAPPER_NAME+'/v1/status')
+def status():
+    """Endpoint retrieving the status of the script launched via API.
+       ---
+       responses:
+         200:
+           description: Returns a list of options to be called on the API
+           examples: "bbicconverter/v1/status": ["GET"]
+    """
+
+    #TODO: Define messages and extract progress
+
+    return jsonify({ "message" : "Concerting files, all good so far...", "progress" : 50})
+
+
+@app.route('/'+WRAPPER_NAME+'/v1/status/schema')
+def schema():
+    """Endpoint explaining the schema for further call automation via API.
+       ---
+       responses:
+         200:
+           description: Returns a schema describing the call structure for the wrapper API.
+           examples: see wrapper_schema.json file
+    """
+
+    with open(SCHEMA_FILE) as json_data:
+        schema_json = json.load(json_data)
+
+    return schema_json
+
+
+
+
+
+@app.route('/'+WRAPPER_NAME+'/v1/script_running')
 def scripts():
     """Example endpoint checking if script is running.
        ---
@@ -106,7 +155,7 @@ def run_flask(debug=False):
     port = sock.getsockname()[1]
     sock.close()
     if debug:
-        port = 8000
+        port = 3333
     app.run(port=port, debug=debug)
 
 
