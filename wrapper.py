@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from flasgger import Swagger
+#from flasgger import Swagger
 
 from optparse import OptionParser
 
@@ -7,10 +7,11 @@ import socket
 import threading
 import subprocess
 
+global script_thread
 script_thread = None
 
 app = Flask(__name__)
-Swagger(app)
+#Swagger(app)
 
 
 @app.route("/")
@@ -113,7 +114,6 @@ if __name__ == "__main__":
     options, args = parse_options()
     script_command = options.script_multiarg
 
-    global script_thread
     script_thread = threading.Thread(target=launch_script, args=script_command)
     script_thread.start()
 
