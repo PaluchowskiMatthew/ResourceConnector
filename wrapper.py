@@ -18,8 +18,7 @@ SCRIPT2 = 'brain_region_filtering.py'
 script_thread = None
 command = 'No command!'
 output = 'No output!'
-
-
+progress = 0
 
 app = Flask(__name__)
 #Swagger(app)
@@ -52,23 +51,50 @@ def status():
            examples: "resourceconnector/v1/status": ["GET"]
     """
 
-    progress = 0
-    message = 'Working on it...'
-    #TODO: Define messages and extract progress
+    message = 'Task starting...'
 
     if SCRIPT1 in command:
         # Get status for bbic_stack.py
+        # Script specific variables
+        SUBTASKS = 4
+
+        out = output.split('\n')
+        quarters = out.count('Done.')
+
         if '--allstack' in command:
             # Four stacks are run
-            out = output.split('\n')
-            quarters = out.count('Done.')
-            if quarters == 4:
+            if quarters == SUBTASKS:
+                # Task is done
+                message = 'Task is done.'
                 progress = 100
+            elif out[-1][0:10] == 'Progress: ':
+                # Task is partially done
+                last_line = out[-1]
+                fraction = last_line[10:last_line.find('/')] / last_line[last_line.find('/')+1:]
+                progress = quarters*100/SUBTASKS+fraction*100/SUBTASKS
+                message = 'Task is in progress...'
+
             else:
-                progress = quarters
+                # Intermediary progress state. Return last known progress
+                progress = progress
+                message = 'Task status unconfirmed'
+
         else:
             # Single stack is run
-            return 25
+            if quarters == 1:
+                # Task is done
+                progress = 100
+                message = 'Task is done.'
+            if out[-1][0:10] == 'Progress: ':
+                # Task is partially done
+                last_line = out[-1]
+                fraction = last_line[10:last_line.find('/')] / last_line[last_line.find('/')+1:]
+                progress = fraction*100
+                message = 'Task is in progress...'
+            else:
+                # Intermediary progress state. Return last known progress
+                progress = progress
+                message = 'Task status unconfirmed'
 
     elif SCRIPT2 in command:
         # Get status for brain_region_filtering.py
