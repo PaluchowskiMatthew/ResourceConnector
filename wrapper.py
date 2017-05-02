@@ -6,12 +6,20 @@ from optparse import OptionParser
 import socket
 import threading
 import subprocess
+import json
 
-global script_thread
-script_thread = None
 
 WRAPPER_NAME = 'resourceconnector'
 SCHEMA_FILE = 'wrapper_schema.json'
+
+SCRIPT1 = 'bbic_stack.py'
+SCRIPT2 = 'brain_region_filtering.py'
+
+script_thread = None
+command = 'No command!'
+output = 'No output!'
+
+
 
 app = Flask(__name__)
 #Swagger(app)
@@ -29,7 +37,7 @@ def registry():
        responses:
          200:
            description: Returns a list of options to be called on the API
-           examples: "bbicconverter/v1/status": ["GET"]
+           examples: "resourceconnector/v1/status": ["GET"]
     """
     return jsonify({"resourceconnector/v1/status": ["GET"]})
 
@@ -41,12 +49,38 @@ def status():
        responses:
          200:
            description: Returns a list of options to be called on the API
-           examples: "bbicconverter/v1/status": ["GET"]
+           examples: "resourceconnector/v1/status": ["GET"]
     """
 
+    progress = 0
+    message = 'Working on it...'
     #TODO: Define messages and extract progress
 
-    return jsonify({ "message" : "Concerting files, all good so far...", "progress" : 50})
+    if SCRIPT1 in command:
+        # Get status for bbic_stack.py
+        if '--allstack' in command:
+            # Four stacks are run
+            out = output.split('\n')
+            quarters = out.count('Done.')
+            if quarters == 4:
+                progress = 100
+            else:
+                progress = quarters
+        else:
+            # Single stack is run
+            return 25
+
+    elif SCRIPT2 in command:
+        # Get status for brain_region_filtering.py
+        #TODO: implement status for brain_region_filtering
+        pass
+
+    else:
+        # Script has no status implemented
+        app.logger.info('No status for this script available.')
+
+
+    return jsonify({ "message" : message, "progress" : progress})
 
 
 @app.route('/'+WRAPPER_NAME+'/v1/status/schema')
@@ -62,7 +96,7 @@ def schema():
     with open(SCHEMA_FILE) as json_data:
         schema_json = json.load(json_data)
 
-    return schema_json
+    return jsonify(schema_json)
 
 
 
@@ -140,8 +174,8 @@ def launch_script(command):
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE)
 
-    output = process.communicate()[0]
-    app.logger.info('Full commmand output: ' + output)
+    output = process.communicate()[0].decode('utf-8')
+    app.logger.info('Full command output: ' + output)
     process.stdin.close()
 
 
