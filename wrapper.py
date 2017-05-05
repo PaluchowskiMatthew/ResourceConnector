@@ -12,13 +12,12 @@ import json
 WRAPPER_NAME = 'resourceconnector'
 SCHEMA_FILE = 'wrapper_schema.json'
 
-SCRIPT1 = 'bbic_stack.py'
-SCRIPT2 = 'brain_region_filtering.py'
+SCRIPT1 = 'bbic_stack'
+SCRIPT2 = 'brain_region_filtering'
 
 script_thread = None
-command = 'No command!'
+script_command = 'No command!'
 output = 'No output!'
-progress = 0
 
 app = Flask(__name__)
 #Swagger(app)
@@ -26,7 +25,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World Wide Wrapper!"
+    return "Welcome to the World Wide Wrapper!"
 
 
 @app.route('/'+WRAPPER_NAME+'/v1/registry')
@@ -50,8 +49,9 @@ def status():
            description: Returns a list of options to be called on the API
            examples: "resourceconnector/v1/status": ["GET"]
     """
-
+    progress = 0
     message = 'Task starting...'
+    command = script_command[0]
 
     if SCRIPT1 in command:
         # Get status for bbic_stack.py
@@ -183,6 +183,18 @@ def parse_options():
                       help="Define which script and all its necessary parameters should be run on the cluster",
                       action="callback", callback=vararg_callback)
 
+    parser.add_option("-p", "--port", dest="port",
+                      help="Define which port is to be used for the wrapper to communicate on",
+                      action="callback", callback=vararg_callback)
+
+    parser.add_option("-h", "--host", dest="host",
+                      help="Define which host the wrapper service should be run on",
+                      action="callback", callback=vararg_callback)
+
+    parser.add_option("-d", "--debug", dest="debug",
+                      help="Choose to run the wrapper in debug mode",
+                      action="store_true", callback=vararg_callback)
+
     return parser.parse_args()
 
 
@@ -192,6 +204,7 @@ def launch_script(command):
     :param command: script which should be run inside the shell
     """
     app.logger.info('Full command:\n' + command)
+    #print('Full command:\n' + command)
 
     process = subprocess.Popen(
         [command],
@@ -210,62 +223,24 @@ def run_flask(debug=False):
     Method for launching flask server on available port.
     :param debug: optional
     """
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.bind(('localhost', 0))
-    port = sock.getsockname()[1]
-    sock.close()
+
     if debug:
         port = 3333
-    app.run(port=port, debug=debug)
+        host = 'localhost'
+    else:
+        port = options.port
+        host = options.host
+
+    app.run(host=host, port=port, debug=debug)
 
 
 if __name__ == "__main__":
     options, args = parse_options()
     script_command = options.script_multiarg
 
+    print(script_command)
+
     script_thread = threading.Thread(target=launch_script, args=script_command)
     script_thread.start()
 
-    run_flask(debug=True)
-
-
-# @app.route('/colors/<palette>/')
-# def colors(palette):
-#     """Example endpoint returning a list of colors by palette
-#     This is using docstrings for specifications.
-#     ---
-#     parameters:
-#       - name: palette
-#         in: path
-#         type: string
-#         enum: ['all', 'rgb', 'cmyk']
-#         required: true
-#         default: all
-#     definitions:
-#       Palette:
-#         type: object
-#         properties:
-#           palette_name:
-#             type: array
-#             items:
-#               $ref: '#/definitions/Color'
-#       Color:
-#         type: string
-#     responses:
-#       200:
-#         description: A list of colors (may be filtered by palette)
-#         schema:
-#           $ref: '#/definitions/Palette'
-#         examples:
-#           rgb: ['red', 'green', 'blue']
-#     """
-#     all_colors = {
-#         'cmyk': ['cian', 'magenta', 'yellow', 'black'],
-#         'rgb': ['red', 'green', 'blue']
-#     }
-#     if palette == 'all':
-#         result = all_colors
-#     else:
-#         result = {palette: all_colors.get(palette)}
-#
-#     return jsonify(result)
+    run_flask(debug=True) #TODO take care of debug with options.debug flag
