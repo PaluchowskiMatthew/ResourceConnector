@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 #from flasgger import Swagger
 
 from optparse import OptionParser
+import Queue
 
 import socket
 import threading
@@ -9,9 +10,9 @@ import subprocess
 import json
 import time
 
-import sys; print(sys.executable)
-import os; print(os.getcwd())
-import sys; print(sys.path)
+#import sys; print(sys.executable)
+#import os; print(os.getcwd())
+#import sys; print(sys.path)
 
 
 WRAPPER_NAME = 'resourceconnector'
@@ -22,9 +23,10 @@ SCRIPT2 = 'brain_region_filtering'
 
 script_thread = None
 script_command = 'No command!'
-xlock = threading.Lock()
-#global task_output
-task_output = 'No output!\n'
+#xlock = threading.Lock()
+#c = threading.Condition()
+resource_stdout = 'Not yet!\n'
+queue = Queue.LifoQueue()
 
 app = Flask(__name__)
 #Swagger(app)
@@ -66,11 +68,14 @@ def status():
         SUBTASKS = 4
 
         #nextline = process.stdout.readline() #decode('utf-8')
-        global task_output
+        #global resource_stdout
+        stdout_item = queue.get()
+        queue.task_done()
         #task_output += str('Listen when i ask -------------')  # +'\n'
         #with xlock:
-        out = task_output.split('\n')
-        quarters = task_output.count('Done.')
+        out = stdout_item.split('\n')
+        quarters = stdout_item.count('Done.')
+        #quarters = ''
 
         if '--all-stacks' in command:
             # Four stacks are run
@@ -78,10 +83,10 @@ def status():
                 # Task is done
                 message = 'Task is done.'
                 progress = 100
-            elif out[-1][0:10] == 'Progress: ':
+            elif out[-2][0:11] == '\rProgress: ':
                 # Task is partially done
-                last_line = out[-1]
-                fraction = last_line[10:last_line.find('/')] / last_line[last_line.find('/')+1:]
+                last_line = out[-2]
+                fraction = float(last_line[11:last_line.find('/')]) / float(last_line[last_line.find('/')+1:])
                 progress = quarters*100/SUBTASKS+fraction*100/SUBTASKS
                 message = 'Task is in progress...'
 
@@ -210,53 +215,73 @@ def parse_options():
 
 
 def launch_script(command):
-    global task_output
+    #global resource_stdout
+    #punchball = 'woop!'
 
     """
     Method for script/command launching inside the shell
     :param command: script which should be run inside the shell
     """
+    global resource_stdout
+    global queue
+    #command = command[0]
+
     app.logger.info('Full command:\n' + command)
     #print('Full command:\n' + command)
 
     #global process
-    process = subprocess.Popen(
+    resource_process = subprocess.Popen(
         [command],
         shell=True,
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE)
 
+    i = 0
+
     # Poll process for new output until finished
     while True:
         from subprocess import check_output
-
         #taskcheck_output = check_output(["ntpq", "-p"])
-        task_line = process.stdout.readline().decode('utf-8')
+        task_line = resource_process.stdout.readline().decode('utf-8')
+        #print('Begin OutHERE.')
+        #print('OutHERE: '+punchball)
+        #print('End OutHERE.')
         #print('Tasks line: ' + task_line)
 
         #task_err = process.stderr.readline().decode('utf-8')
         #print('Tasks check: '+taskcheck_output)
         if task_line != '':
+            i += 1
             #with xlock:
-            task_output += str(task_line) #+'\n'
+            #c.acquire()
+
+            resource_stdout = resource_stdout + task_line #+'\n'
             print('Begin Task.')
-            print('Tasks: '+ task_output)
+            print('Tasks: ' + resource_stdout)
             print('End Task.')
+            #c.notify_all()
+            #c.release()
+
+            global queue
+            queue.put(resource_stdout)
+            #queue.join()
+
+
         #print('Tasks error: '+task_err)
         # if task_output.split('\n')[-1] == '' and process.poll() != None:
         #    break
         # sys.stdout.write(task_output)
         # sys.stdout.write(task_err)
         #sys.stdout.flush()
-        out2 = task_output
+        #out2 = punchball
         time.sleep(1)
 
     global output
-    output = process.communicate()[0].decode('utf-8')
+    output = resource_process.communicate()[0].decode('utf-8')
     print('Full command output: ' + output)
     app.logger.info('Full command output: ' + output)
-    process.stdin.close()
+    resource_process.stdin.close()
 
 
 def run_flask(debug=False):
@@ -280,10 +305,12 @@ if __name__ == "__main__":
     script_command = options.script_multiarg
 
     print(script_command)
+#    global resource_stdout
 
-    script_thread = threading.Thread(target=launch_script, args=script_command)
+    script_thread = threading.Thread(name='Resource-Script-Thread', target=launch_script, args=script_command)
     script_thread.start()
 
-    run_flask(debug=True) #TODO take care of debug with options.debug flag
+    run_flask(debug=False) #TODO take care of debug with options.debug flag
+    #script_thread.join()
 
 
