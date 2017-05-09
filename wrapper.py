@@ -7,6 +7,11 @@ import socket
 import threading
 import subprocess
 import json
+import time
+
+import sys; print(sys.executable)
+import os; print(os.getcwd())
+import sys; print(sys.path)
 
 
 WRAPPER_NAME = 'resourceconnector'
@@ -17,7 +22,9 @@ SCRIPT2 = 'brain_region_filtering'
 
 script_thread = None
 script_command = 'No command!'
-output = 'No output!'
+xlock = threading.Lock()
+#global task_output
+task_output = 'No output!\n'
 
 app = Flask(__name__)
 #Swagger(app)
@@ -58,10 +65,14 @@ def status():
         # Script specific variables
         SUBTASKS = 4
 
-        out = output.split('\n')
-        quarters = out.count('Done.')
+        #nextline = process.stdout.readline() #decode('utf-8')
+        global task_output
+        #task_output += str('Listen when i ask -------------')  # +'\n'
+        #with xlock:
+        out = task_output.split('\n')
+        quarters = task_output.count('Done.')
 
-        if '--allstack' in command:
+        if '--all-stacks' in command:
             # Four stacks are run
             if quarters == SUBTASKS:
                 # Task is done
@@ -187,18 +198,20 @@ def parse_options():
                       help="Define which port is to be used for the wrapper to communicate on",
                       action="callback", callback=vararg_callback)
 
-    parser.add_option("-h", "--host", dest="host",
+    parser.add_option("-t", "--host", dest="host",
                       help="Define which host the wrapper service should be run on",
                       action="callback", callback=vararg_callback)
 
     parser.add_option("-d", "--debug", dest="debug",
                       help="Choose to run the wrapper in debug mode",
-                      action="store_true", callback=vararg_callback)
+                      action="store_true")
 
     return parser.parse_args()
 
 
 def launch_script(command):
+    global task_output
+
     """
     Method for script/command launching inside the shell
     :param command: script which should be run inside the shell
@@ -206,6 +219,7 @@ def launch_script(command):
     app.logger.info('Full command:\n' + command)
     #print('Full command:\n' + command)
 
+    #global process
     process = subprocess.Popen(
         [command],
         shell=True,
@@ -213,7 +227,34 @@ def launch_script(command):
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE)
 
+    # Poll process for new output until finished
+    while True:
+        from subprocess import check_output
+
+        #taskcheck_output = check_output(["ntpq", "-p"])
+        task_line = process.stdout.readline().decode('utf-8')
+        #print('Tasks line: ' + task_line)
+
+        #task_err = process.stderr.readline().decode('utf-8')
+        #print('Tasks check: '+taskcheck_output)
+        if task_line != '':
+            #with xlock:
+            task_output += str(task_line) #+'\n'
+            print('Begin Task.')
+            print('Tasks: '+ task_output)
+            print('End Task.')
+        #print('Tasks error: '+task_err)
+        # if task_output.split('\n')[-1] == '' and process.poll() != None:
+        #    break
+        # sys.stdout.write(task_output)
+        # sys.stdout.write(task_err)
+        #sys.stdout.flush()
+        out2 = task_output
+        time.sleep(1)
+
+    global output
     output = process.communicate()[0].decode('utf-8')
+    print('Full command output: ' + output)
     app.logger.info('Full command output: ' + output)
     process.stdin.close()
 
@@ -244,3 +285,5 @@ if __name__ == "__main__":
     script_thread.start()
 
     run_flask(debug=True) #TODO take care of debug with options.debug flag
+
+
