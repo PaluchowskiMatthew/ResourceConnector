@@ -2,37 +2,34 @@ from flask import Flask, jsonify
 #from flasgger import Swagger
 
 from optparse import OptionParser
-import Queue
 
-import socket
 import threading
 import subprocess
 import json
+import socket
 import time
-
-#import sys; print(sys.executable)
-#import os; print(os.getcwd())
-#import sys; print(sys.path)
 
 
 WRAPPER_NAME = 'resourceconnector'
 SCHEMA_FILE = 'wrapper_schema.json'
 
+'''---------- SCRIPT DEFINITIONS ----------'''
 SCRIPT1 = 'bbic_stack'
 SCRIPT2 = 'brain_region_filtering'
 
+'''---------- GLOBALS ----------'''
 script_thread = None
 script_command = 'No command!'
 resource_stdout = 'STDOUT:\n'
 resource_stderr = 'STDERR:\n'
-
-progress = 0
 message = 'Task starting...'
+progress = 0
 
 app = Flask(__name__)
 #Swagger(app)
 
 
+'''---------- API ROUTE DEFINITIONS ----------'''
 @app.route("/")
 def hello():
     return "Welcome to the World Wide Wrapper!"
@@ -64,6 +61,7 @@ def status():
 
     command = script_command[0]
 
+    ### ---------- SCRIPT 1 PROGRESS EXTRATION ---------- ###
     if SCRIPT1 in command:
         # Get status for bbic_stack.py
 
@@ -121,6 +119,7 @@ def status():
                 # Intermediary progress state. Return last known progress
                 message = 'Task status unconfirmed'
 
+    ### ---------- SCRIPT 2 PROGRESS EXTRATION ---------- ###
     elif SCRIPT2 in command:
         # Get status for brain_region_filtering.py
         #TODO: implement status for brain_region_filtering
@@ -150,9 +149,6 @@ def schema():
     return jsonify(schema_json)
 
 
-
-
-
 @app.route('/'+WRAPPER_NAME+'/v1/script_running')
 def scripts():
     """Example endpoint checking if script is running.
@@ -166,6 +162,7 @@ def scripts():
     return jsonify({'script_running': script_thread.is_alive()})
 
 
+'''---------- OPTION PARSER ----------'''
 def vararg_callback(option, opt_str, value, parser):
     """ Option taking a variable number of arguments.
     Taken from here: https://docs.python.org/2/library/optparse.html#optparse-option-callbacks
@@ -222,23 +219,20 @@ def parse_options():
 
     return parser.parse_args()
 
-
+'''---------- SCRIPT LAUNCH SECTION ----------'''
 def launch_script(command):
-    #global resource_stdout
-    #punchball = 'woop!'
-
     """
     Method for script/command launching inside the shell
     :param command: script which should be run inside the shell
     """
     global resource_stdout
     global resource_stderr
+    #global process #TODO still needed?
     #command = command[0]
 
-    app.logger.info('Full command:\n' + command)
-    #print('Full command:\n' + command)
+    app.logger.info('Full command: ' + command)
+    print('Full command: ' + command)
 
-    #global process
     resource_process = subprocess.Popen(
         [command],
         shell=True,
@@ -249,21 +243,18 @@ def launch_script(command):
     # Poll process for new output until finished
     while True:
         out_line = resource_process.stdout.readline().decode('utf-8')
-        # err_line = resource_process.stderr.readline().decode('utf-8') #TODO problematic line
+        # err_line = resource_process.stderr.readline().decode('utf-8') #TODO problematic line for duplicate output file detection
 
         if out_line != '':
             resource_stdout = resource_stdout + out_line
         # if err_line != '':
         #     resource_stderr = resource_stderr + err_line
-            #print('Begin Task.')
-            #print('Tasks: ' + resource_stdout)
-            #print('End Task.')
-        #time.sleep(1)
 
-    global output
+        #TODO sleep seems to reduce performance time.sleep(1)
+
     output = resource_process.communicate()[0].decode('utf-8')
-    print('Full command output: ' + output)
-    app.logger.info('Full command output: ' + output)
+    app.logger.info('Full process output: ' + output)
+    print('Full process output: ' + output)
     resource_process.stdin.close()
 
 
@@ -287,12 +278,10 @@ if __name__ == "__main__":
     options, args = parse_options()
     script_command = options.script_multiarg
 
-    print(script_command)
-
     script_thread = threading.Thread(name='Resource-Script-Thread', target=launch_script, args=script_command)
     script_thread.start()
 
-    run_flask(debug=False) #Not to be run in debug mode, since additional threads interfere with shared variables
-    #script_thread.join()
+    run_flask(debug=False) #NOT to be run in debug mode, since additional threads interfere with shared variables
+    script_thread.join() #TODO is this needed?
 
 
