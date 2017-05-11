@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61af5004-065e-4fb6-881c-5c5892103641" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/file_BAK.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bbic/__init__.py" afterPath="$PROJECT_DIR$/bbic/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bbic/file.py" afterPath="$PROJECT_DIR$/bbic/file.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bbic/stack.py" afterPath="$PROJECT_DIR$/bbic/stack.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wrapper.py" afterPath="$PROJECT_DIR$/wrapper.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,15 +18,18 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Wrapper$threadtest.coverage" NAME="threadtest Coverage Results" MODIFIED="1494346392204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_1_stack.coverage" NAME="Wrapper local working 1 stack Coverage Results" MODIFIED="1494500620441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_1_stack.coverage" NAME="Wrapper local working 1 stack Coverage Results" MODIFIED="1494502382154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local.coverage" NAME="Wrapper local Coverage Results" MODIFIED="1493990301173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_the_new_guy.coverage" NAME="Wrapper the new guy Coverage Results" MODIFIED="1494317386075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack.coverage" NAME="Wrapper local working all stack Coverage Results" MODIFIED="1494519083449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_obbic.coverage" NAME="Wrapper local working all stack obbic Coverage Results" MODIFIED="1494516359915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_mid.coverage" NAME="Wrapper local working all stack mid Coverage Results" MODIFIED="1494519243977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_intern.coverage" NAME="Wrapper local intern Coverage Results" MODIFIED="1493990695415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_the_new_guy__1_.coverage" NAME="Wrapper the new guy (1) Coverage Results" MODIFIED="1494316922163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper.coverage" NAME="Wrapper Coverage Results" MODIFIED="1493738825520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_edits.coverage" NAME="Wrapper local edits Coverage Results" MODIFIED="1494451607702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper__1_.coverage" NAME="Wrapper test Coverage Results" MODIFIED="1493977973140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$file.coverage" NAME="file Coverage Results" MODIFIED="1493994041989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_the_new_guy.coverage" NAME="Wrapper the new guy Coverage Results" MODIFIED="1494317386075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper.coverage" NAME="Wrapper Coverage Results" MODIFIED="1493738825520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_edits.coverage" NAME="Wrapper local edits Coverage Results" MODIFIED="1494515978210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$subprocesstest.coverage" NAME="subprocesstest Coverage Results" MODIFIED="1494364743884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_test.coverage" NAME="Wrapper test Coverage Results" MODIFIED="1494316865243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -35,8 +42,8 @@
       <file leaf-file-name="wrapper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="78" column="34" lean-forward="false" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+            <state relative-caret-position="441">
+              <caret line="260" column="22" lean-forward="true" selection-start-line="260" selection-start-column="22" selection-end-line="260" selection-end-column="22" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -44,43 +51,76 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/envs/py27/lib/python2.7/site-packages/flask/app.py">
+      <file leaf-file-name="bbic_stack.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bbic_stack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="1597" column="0" lean-forward="false" selection-start-line="1597" selection-start-column="0" selection-end-line="1597" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="socket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/envs/py27/lib/python2.7/socket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3924">
-              <caret line="221" column="0" lean-forward="false" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resourceconnector.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resourceconnector.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6228">
-              <caret line="347" column="48" lean-forward="false" selection-start-line="287" selection-start-column="0" selection-end-line="292" selection-end-column="35" />
+            <state relative-caret-position="513">
+              <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#272#281#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="threadtest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/threadtest.py">
+      <file leaf-file-name="file.py" pinned="false" current-in-tab="false">
+        <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="433">
+              <caret line="168" column="16" lean-forward="false" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stack.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bbic/stack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1494519039125" expanded="true" signature="11013:11211" ph="..." />
+                <marker date="1494519039125" expanded="true" signature="11087:11211" ph="..." />
+                <marker date="1494519039125" expanded="true" signature="11290:12072" ph="..." />
+                <marker date="1494519039125" expanded="true" signature="11523:11796" ph="..." />
+                <marker date="1494519039125" expanded="true" signature="11598:11761" ph="..." />
+                <marker date="1494519039125" expanded="true" signature="11896:12051" ph="..." />
+                <marker date="1494519039125" expanded="true" signature="11942:12051" ph="..." />
+                <marker date="1494519039125" expanded="true" signature="12127:12411" ph="..." />
+                <marker date="1494519039125" expanded="true" signature="12463:12917" ph="..." />
+                <marker date="1494519039125" expanded="true" signature="12839:12917" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stack.py" pinned="false" current-in-tab="false">
+        <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/stack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1757">
+              <caret line="282" column="34" lean-forward="false" selection-start-line="282" selection-start-column="34" selection-end-line="282" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+              <folding>
+                <element signature="e#241#263#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bbic/file.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-31">
+              <caret line="133" column="26" lean-forward="false" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -115,6 +155,10 @@
       <find>start</find>
       <find>thread</find>
       <find>run</find>
+      <find>range</find>
+      <find>num</find>
+      <find>std</find>
+      <find>FILE</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,6 +175,9 @@
         <option value="$PROJECT_DIR$/resourceconnector.py" />
         <option value="$PROJECT_DIR$/threadtest.py" />
         <option value="$PROJECT_DIR$/subprocesstest.py" />
+        <option value="/mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/__init__.py" />
+        <option value="/mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/file.py" />
+        <option value="/mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/stack.py" />
         <option value="$PROJECT_DIR$/wrapper.py" />
       </list>
     </option>
@@ -214,18 +261,20 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/tools" />
-      <recent name="$PROJECT_DIR$/tools/bbic" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bbic" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tools/bbic" />
       <recent name="$PROJECT_DIR$/tools/bbic/bbic" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/tools" />
+      <recent name="$PROJECT_DIR$/tools/bbic" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.Wrapper local working 1 stack">
+  <component name="RunManager" selected="Python.Wrapper local working all stack">
     <configuration default="false" name="file" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -584,6 +633,60 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="Wrapper local working all stack" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Wrapper" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wrapper.py" />
+      <option name="PARAMETERS" value="--script-command &quot;python -u bbic_stack.py ../../log/output_v03.h5 --create-from ../../data/bigbrain600/list_short.txt --orientation coronal --all-stacks&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Wrapper local working all stack mid" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Wrapper" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wrapper.py" />
+      <option name="PARAMETERS" value="--script-command &quot;python -u bbic_stack.py ../../log/output_v03.h5 --create-from ../../data/bigbrain600/list_mid.txt --orientation coronal --all-stacks&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Wrapper local working all stack obbic" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Wrapper" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wrapper.py" />
+      <option name="PARAMETERS" value="--script-command &quot;python -u $PROJECT_DIR$/../datapreprocessing/bbic-tools/python/viz_version/tools/bbic_stack.py ../../log/output_v03.h5 --create-from ../../data/bigbrain600/list_short.txt --orientation coronal --all-stacks&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="Wrapper the new guy (1)" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -638,18 +741,21 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <list size="11">
+    <list size="14">
       <item index="0" class="java.lang.String" itemvalue="Python.Wrapper" />
       <item index="1" class="java.lang.String" itemvalue="Python.Wrapper test" />
       <item index="2" class="java.lang.String" itemvalue="Python.Wrapper local working" />
       <item index="3" class="java.lang.String" itemvalue="Python.Wrapper local edits" />
       <item index="4" class="java.lang.String" itemvalue="Python.Wrapper local working 1 stack" />
-      <item index="5" class="java.lang.String" itemvalue="Python.Wrapper the new guy (1)" />
-      <item index="6" class="java.lang.String" itemvalue="Python.Wrapper local intern" />
-      <item index="7" class="java.lang.String" itemvalue="Python.Wrapper local" />
-      <item index="8" class="java.lang.String" itemvalue="Python.file" />
-      <item index="9" class="java.lang.String" itemvalue="Python.threadtest" />
-      <item index="10" class="java.lang.String" itemvalue="Python.subprocesstest" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Wrapper local working all stack" />
+      <item index="6" class="java.lang.String" itemvalue="Python.Wrapper local working all stack mid" />
+      <item index="7" class="java.lang.String" itemvalue="Python.Wrapper local working all stack obbic" />
+      <item index="8" class="java.lang.String" itemvalue="Python.Wrapper the new guy (1)" />
+      <item index="9" class="java.lang.String" itemvalue="Python.Wrapper local intern" />
+      <item index="10" class="java.lang.String" itemvalue="Python.Wrapper local" />
+      <item index="11" class="java.lang.String" itemvalue="Python.file" />
+      <item index="12" class="java.lang.String" itemvalue="Python.threadtest" />
+      <item index="13" class="java.lang.String" itemvalue="Python.subprocesstest" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -674,7 +780,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="2562" height="1413" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13961814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -682,9 +788,9 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.57894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3482972" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39103234" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39086688" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3978328" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -730,20 +836,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>96</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/wrapper.py</url>
-          <line>105</line>
-          <option name="timeStamp" value="48" />
+          <url>file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/stack.py</url>
+          <line>267</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="49" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -792,7 +893,7 @@
         <state relative-caret-position="6228">
           <caret line="347" column="48" lean-forward="false" selection-start-line="287" selection-start-column="0" selection-end-line="292" selection-end-column="35" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -819,6 +920,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1458">
           <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -826,13 +928,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bbic/file.py">
+    <entry file="file://$PROJECT_DIR$/tests/file_BAK.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4212">
           <caret line="239" column="57" lean-forward="false" selection-start-line="239" selection-start-column="57" selection-end-line="239" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -850,6 +954,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1458">
           <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -857,13 +962,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bbic/file.py">
+    <entry file="file://$PROJECT_DIR$/tests/file_BAK.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4212">
           <caret line="239" column="57" lean-forward="true" selection-start-line="239" selection-start-column="57" selection-end-line="239" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -991,25 +1098,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/bbic/__init__.py" />
-    <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bbic_stack_modified.py" />
-    <entry file="file://$PROJECT_DIR$/bbic_stack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1458">
-          <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bbic/file.py">
+    <entry file="file://$PROJECT_DIR$/tests/file_BAK.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4212">
           <caret line="239" column="57" lean-forward="false" selection-start-line="239" selection-start-column="57" selection-end-line="239" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1040,7 +1134,7 @@
         <state relative-caret-position="6228">
           <caret line="347" column="48" lean-forward="false" selection-start-line="287" selection-start-column="0" selection-end-line="292" selection-end-column="35" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1083,10 +1177,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bbic/file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="133" column="26" lean-forward="false" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#241#263#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bbic_stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding>
+            <element signature="e#272#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="168" column="16" lean-forward="false" selection-start-line="168" selection-start-column="16" selection-end-line="168" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bbic/stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1494519039125" expanded="true" signature="11013:11211" ph="..." />
+            <marker date="1494519039125" expanded="true" signature="11087:11211" ph="..." />
+            <marker date="1494519039125" expanded="true" signature="11290:12072" ph="..." />
+            <marker date="1494519039125" expanded="true" signature="11523:11796" ph="..." />
+            <marker date="1494519039125" expanded="true" signature="11598:11761" ph="..." />
+            <marker date="1494519039125" expanded="true" signature="11896:12051" ph="..." />
+            <marker date="1494519039125" expanded="true" signature="11942:12051" ph="..." />
+            <marker date="1494519039125" expanded="true" signature="12127:12411" ph="..." />
+            <marker date="1494519039125" expanded="true" signature="12463:12917" ph="..." />
+            <marker date="1494519039125" expanded="true" signature="12839:12917" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1757">
+          <caret line="282" column="34" lean-forward="false" selection-start-line="282" selection-start-column="34" selection-end-line="282" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="78" column="34" lean-forward="false" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+        <state relative-caret-position="441">
+          <caret line="260" column="22" lean-forward="true" selection-start-line="260" selection-start-column="22" selection-end-line="260" selection-end-column="22" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

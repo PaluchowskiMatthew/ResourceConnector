@@ -265,7 +265,7 @@ class StackLevel(BlockProvider, ImageProvider):
         uninitialized (no data)"""
         num_blocks = self.get_block_count()
         block_indices = []
-        for z in range(num_blocks[2]):
+        for z in range(int(num_blocks[2])): #TODO need to be int in range!
             for v in range(num_blocks[1]):
                 for u in range(num_blocks[0]):
                     block_indices.append(DataBlock(u, v, z, self.tile_size))

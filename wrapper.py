@@ -23,10 +23,11 @@ SCRIPT2 = 'brain_region_filtering'
 
 script_thread = None
 script_command = 'No command!'
-#xlock = threading.Lock()
-#c = threading.Condition()
-resource_stdout = 'Not yet!\n'
-queue = Queue.LifoQueue()
+resource_stdout = 'STDOUT:\n'
+resource_stderr = 'STDERR:\n'
+
+progress = 0
+message = 'Task starting...'
 
 app = Flask(__name__)
 #Swagger(app)
@@ -58,26 +59,29 @@ def status():
            description: Returns a list of options to be called on the API
            examples: "resourceconnector/v1/status": ["GET"]
     """
-    progress = 0
-    message = 'Task starting...'
+    global message
+    global progress
+
     command = script_command[0]
 
     if SCRIPT1 in command:
         # Get status for bbic_stack.py
+
         # Script specific variables
         SUBTASKS = 4
 
-        #nextline = process.stdout.readline() #decode('utf-8')
+        # Read script output
         global resource_stdout
-        stdout_item = queue.get()
-        queue.task_done()
-        #task_output += str('Listen when i ask -------------')  # +'\n'
-        #with xlock:
-        # out = stdout_item.split('\n')
-        # quarters = stdout_item.count('Done.')
+        global resource_stderr
+        print(resource_stdout)
+        print(resource_stderr)
+
         out = resource_stdout.split('\n')
         quarters = resource_stdout.count('Done.')
-        #quarters = ''
+
+
+        if resource_stderr.count('ValueError: Unable to create group (Name already exists)') > 0:
+            return jsonify({"message": 'Couldn start task because OUTPUT FILE already exists!', "progress": 0})
 
         if '--all-stacks' in command:
             # Four stacks are run
@@ -94,11 +98,9 @@ def status():
                 quarter = quarters * 100 / SUBTASKS
                 subtask = fraction * 100 / SUBTASKS
                 progress = int(quarter + subtask)
-                message = 'Task is in progress...'
-
+                message = 'Task in progress...'
             else:
                 # Intermediary progress state. Return last known progress
-                progress = progress
                 message = 'Task status unconfirmed'
 
         else:
@@ -114,10 +116,9 @@ def status():
                 total = float(last_line[last_line.find('/') + 1:])
                 fraction = step / total
                 progress = int(fraction*100)
-                message = 'Task is in progress...'
+                message = 'Task in progress...'
             else:
                 # Intermediary progress state. Return last known progress
-                progress = progress
                 message = 'Task status unconfirmed'
 
     elif SCRIPT2 in command:
@@ -231,7 +232,7 @@ def launch_script(command):
     :param command: script which should be run inside the shell
     """
     global resource_stdout
-    global queue
+    global resource_stderr
     #command = command[0]
 
     app.logger.info('Full command:\n' + command)
@@ -245,45 +246,19 @@ def launch_script(command):
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE)
 
-    i = 0
-
     # Poll process for new output until finished
     while True:
-        from subprocess import check_output
-        #taskcheck_output = check_output(["ntpq", "-p"])
-        task_line = resource_process.stdout.readline().decode('utf-8')
-        #print('Begin OutHERE.')
-        #print('OutHERE: '+punchball)
-        #print('End OutHERE.')
-        #print('Tasks line: ' + task_line)
+        out_line = resource_process.stdout.readline().decode('utf-8')
+        # err_line = resource_process.stderr.readline().decode('utf-8') #TODO problematic line
 
-        #task_err = process.stderr.readline().decode('utf-8')
-        #print('Tasks check: '+taskcheck_output)
-        if task_line != '':
-            i += 1
-            #with xlock:
-            #c.acquire()
-
-            resource_stdout = resource_stdout + task_line #+'\n'
-            print('Begin Task.')
-            print('Tasks: ' + resource_stdout)
-            print('End Task.')
-            #c.notify_all()
-            #c.release()
-
-            global queue
-            queue.put(resource_stdout)
-            #queue.join()
-
-
-        #print('Tasks error: '+task_err)
-        # if task_output.split('\n')[-1] == '' and process.poll() != None:
-        #    break
-        # sys.stdout.write(task_output)
-        # sys.stdout.write(task_err)
-        #sys.stdout.flush()
-        #out2 = punchball
-        time.sleep(1)
+        if out_line != '':
+            resource_stdout = resource_stdout + out_line
+        # if err_line != '':
+        #     resource_stderr = resource_stderr + err_line
+            #print('Begin Task.')
+            #print('Tasks: ' + resource_stdout)
+            #print('End Task.')
+        #time.sleep(1)
 
     global output
     output = resource_process.communicate()[0].decode('utf-8')
@@ -299,7 +274,7 @@ def run_flask(debug=False):
     """
 
     if debug:
-        port = 3333
+        port = 5000
         host = 'localhost'
     else:
         port = options.port
@@ -313,12 +288,11 @@ if __name__ == "__main__":
     script_command = options.script_multiarg
 
     print(script_command)
-#    global resource_stdout
 
     script_thread = threading.Thread(name='Resource-Script-Thread', target=launch_script, args=script_command)
     script_thread.start()
 
-    run_flask(debug=False) #TODO take care of debug with options.debug flag
+    run_flask(debug=False) #Not to be run in debug mode, since additional threads interfere with shared variables
     #script_thread.join()
 
 
