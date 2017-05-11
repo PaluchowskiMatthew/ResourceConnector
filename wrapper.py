@@ -12,21 +12,24 @@ import time
 
 WRAPPER_NAME = 'resourceconnector'
 SCHEMA_FILE = 'wrapper_schema.json'
+app = Flask(__name__)
+#Swagger(app)
+
 
 '''---------- SCRIPT DEFINITIONS ----------'''
 SCRIPT1 = 'bbic_stack'
 SCRIPT2 = 'brain_region_filtering'
 
+
 '''---------- GLOBALS ----------'''
 script_thread = None
+start_time = None
+script_runs = True
 script_command = 'No command!'
 resource_stdout = 'STDOUT:\n'
 resource_stderr = 'STDERR:\n'
 message = 'Task starting...'
 progress = 0
-
-app = Flask(__name__)
-#Swagger(app)
 
 
 '''---------- API ROUTE DEFINITIONS ----------'''
@@ -56,6 +59,7 @@ def status():
            description: Returns a list of options to be called on the API
            examples: "resourceconnector/v1/status": ["GET"]
     """
+    global script_runs
     global message
     global progress
 
@@ -87,6 +91,9 @@ def status():
                 # Task is done
                 message = 'Task is done.'
                 progress = 100
+                print(message)
+                print('Time taken: '+str(time.clock()-start_time))
+                script_runs = False
             elif out[-2][0:11] == '\rProgress: ':
                 # Task is partially done
                 last_line = out[-2]
@@ -107,6 +114,9 @@ def status():
                 # Task is done
                 progress = 100
                 message = 'Task is done.'
+                print(message)
+                print('Time taken: '+str(time.clock()-start_time))
+                script_runs = False
             elif out[-2][0:11] == '\rProgress: ':
                 # Task is partially done
                 last_line = out[-2]
@@ -225,6 +235,7 @@ def launch_script(command):
     Method for script/command launching inside the shell
     :param command: script which should be run inside the shell
     """
+    global script_runs
     global resource_stdout
     global resource_stderr
     #global process #TODO still needed?
@@ -232,6 +243,9 @@ def launch_script(command):
 
     app.logger.info('Full command: ' + command)
     print('Full command: ' + command)
+
+    global start_time
+    start_time = time.clock()
 
     resource_process = subprocess.Popen(
         [command],
@@ -241,7 +255,7 @@ def launch_script(command):
         stderr=subprocess.PIPE)
 
     # Poll process for new output until finished
-    while True:
+    while script_runs:
         out_line = resource_process.stdout.readline().decode('utf-8')
         # err_line = resource_process.stderr.readline().decode('utf-8') #TODO problematic line for duplicate output file detection
 
@@ -250,7 +264,7 @@ def launch_script(command):
         # if err_line != '':
         #     resource_stderr = resource_stderr + err_line
 
-        #TODO sleep seems to reduce performance time.sleep(1)
+        #time.sleep(1) #TODO seems to reduce performance
 
     output = resource_process.communicate()[0].decode('utf-8')
     app.logger.info('Full process output: ' + output)
