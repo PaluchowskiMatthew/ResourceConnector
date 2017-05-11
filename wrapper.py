@@ -68,13 +68,15 @@ def status():
         SUBTASKS = 4
 
         #nextline = process.stdout.readline() #decode('utf-8')
-        #global resource_stdout
+        global resource_stdout
         stdout_item = queue.get()
         queue.task_done()
         #task_output += str('Listen when i ask -------------')  # +'\n'
         #with xlock:
-        out = stdout_item.split('\n')
-        quarters = stdout_item.count('Done.')
+        # out = stdout_item.split('\n')
+        # quarters = stdout_item.count('Done.')
+        out = resource_stdout.split('\n')
+        quarters = resource_stdout.count('Done.')
         #quarters = ''
 
         if '--all-stacks' in command:
@@ -86,8 +88,12 @@ def status():
             elif out[-2][0:11] == '\rProgress: ':
                 # Task is partially done
                 last_line = out[-2]
-                fraction = float(last_line[11:last_line.find('/')]) / float(last_line[last_line.find('/')+1:])
-                progress = quarters*100/SUBTASKS+fraction*100/SUBTASKS
+                step = float(last_line[11:last_line.find('/')])
+                total = float(last_line[last_line.find('/') + 1:])
+                fraction = step / total
+                quarter = quarters * 100 / SUBTASKS
+                subtask = fraction * 100 / SUBTASKS
+                progress = int(quarter + subtask)
                 message = 'Task is in progress...'
 
             else:
@@ -101,11 +107,13 @@ def status():
                 # Task is done
                 progress = 100
                 message = 'Task is done.'
-            if out[-1][0:10] == 'Progress: ':
+            elif out[-2][0:11] == '\rProgress: ':
                 # Task is partially done
-                last_line = out[-1]
-                fraction = last_line[10:last_line.find('/')] / last_line[last_line.find('/')+1:]
-                progress = fraction*100
+                last_line = out[-2]
+                step = float(last_line[11:last_line.find('/')])
+                total = float(last_line[last_line.find('/') + 1:])
+                fraction = step / total
+                progress = int(fraction*100)
                 message = 'Task is in progress...'
             else:
                 # Intermediary progress state. Return last known progress
