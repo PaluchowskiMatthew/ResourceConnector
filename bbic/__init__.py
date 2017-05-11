@@ -4,7 +4,7 @@
 # Copyright (c) BBP/EPFL 2014-2015; All rights reserved.
 # Do not distribute without further notice.
 
-__all__ = ["file.py", "volume", "stack", "image_stack", "image_utils", "slice_to_blocks"]
+__all__ = ["file", "volume", "stack", "image_stack", "image_utils", "slice_to_blocks"]
 
 from .file import File
 from .stack import *
