@@ -172,6 +172,24 @@ def scripts():
     return jsonify({'script_running': script_thread.is_alive()})
 
 
+@app.route('/'+WRAPPER_NAME+'/v1/exit')
+def exit():
+    """Call to gracefully shutting down the wrapper
+       ---
+       responses:
+         200:
+           description: Gracefully shutting down the wrapper from remote call
+           examples:
+             exit: True
+    """
+
+    #TODO shutdown script gracefully
+    global script_runs
+    script_runs = False
+
+    return jsonify({'exit': not script_runs})
+
+
 '''---------- OPTION PARSER ----------'''
 def vararg_callback(option, opt_str, value, parser):
     """ Option taking a variable number of arguments.
