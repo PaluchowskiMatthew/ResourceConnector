@@ -217,11 +217,11 @@ def parse_options():
 
     parser.add_option("-p", "--port", dest="port",
                       help="Define which port is to be used for the wrapper to communicate on",
-                      action="callback", callback=vararg_callback)
+                      action="store", type='string')
 
     parser.add_option("-t", "--host", dest="host",
                       help="Define which host the wrapper service should be run on",
-                      action="callback", callback=vararg_callback)
+                      action="store", type='string')
 
     parser.add_option("-d", "--debug", dest="debug",
                       help="Choose to run the wrapper in debug mode",
