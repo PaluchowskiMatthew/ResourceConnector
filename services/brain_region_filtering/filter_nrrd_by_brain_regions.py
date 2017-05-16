@@ -38,7 +38,6 @@ filtered_children_ids = set([19])
 # brain_region_id = 382
 # filtered_children_ids = set([391, 399, 407, 415])
 
-
 parser = OptionParser()
 
 def advance5p():
@@ -150,7 +149,6 @@ def parse_options():
 
 
 if __name__ == "__main__":
-    global parser
     options, args = parse_options()
 
     if not options.input_brain_regions or not options.input_gray_levels or not options.input_nissl or not options.output_folder_path:

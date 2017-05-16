@@ -64,6 +64,11 @@ def status():
     global progress
 
     command = script_command[0]
+    # Read script output
+    global resource_stdout
+    global resource_stderr
+    print(resource_stdout)
+    print(resource_stderr)
 
     ### ---------- SCRIPT 1 PROGRESS EXTRATION ---------- ###
     if SCRIPT1 in command:
@@ -72,15 +77,8 @@ def status():
         # Script specific variables
         SUBTASKS = 4
 
-        # Read script output
-        global resource_stdout
-        global resource_stderr
-        print(resource_stdout)
-        print(resource_stderr)
-
         out = resource_stdout.split('\n')
         quarters = resource_stdout.count('Done.')
-
 
         if resource_stderr.count('ValueError: Unable to create group (Name already exists)') > 0:
             return jsonify({"message": 'Couldn start task because OUTPUT FILE already exists!', "progress": 0})
@@ -132,8 +130,17 @@ def status():
     ### ---------- SCRIPT 2 PROGRESS EXTRATION ---------- ###
     elif SCRIPT2 in command:
         # Get status for brain_region_filtering.py
-        #TODO: implement status for brain_region_filtering
-        pass
+
+        start = resource_stdout.rfind('\rProgress: ')
+
+        if start != -1:
+            end = resource_stdout.find('\n', start)
+            last_line = resource_stdout[start:end]
+            progress = int(last_line[11:])
+            message = 'Task in progress...'
+        else:
+            # Intermediary progress state. Return last known progress
+            message = 'Task starting...'
 
     else:
         # Script has no status implemented
@@ -275,12 +282,14 @@ def launch_script(command):
     # Poll process for new output until finished
     while script_runs:
         out_line = resource_process.stdout.readline().decode('utf-8')
-        # err_line = resource_process.stderr.readline().decode('utf-8') #TODO problematic line for duplicate output file detection
 
         if out_line != '':
             resource_stdout = resource_stdout + out_line
-        # if err_line != '':
-        #     resource_stderr = resource_stderr + err_line
+
+        if False:
+            err_line = resource_process.stderr.readline().decode('utf-8')  # TODO problematic line for duplicate output file detection
+            if err_line != '':
+                resource_stderr = resource_stderr + err_line
 
         #time.sleep(1) #TODO seems to reduce performance
 
