@@ -138,6 +138,8 @@ def status():
             last_line = resource_stdout[start:end]
             progress = int(last_line[11:])
             message = 'Task in progress...'
+            if progress == 100:
+                message = 'Task is done.'
         else:
             # Intermediary progress state. Return last known progress
             message = 'Task starting...'
