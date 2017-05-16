@@ -15,8 +15,6 @@ from .image_utils import get_compressed_tile
 BBIC_UNKNOWN_VERSION = 0
 BBIC_CURRENT_VERSION = 1
 
-#import tqdm
-
 class File:
     """Read/write BBIC volumes to/from hdf5"""
 
@@ -168,7 +166,7 @@ class File:
                     tile = get_compressed_tile(im, x, y, tile_size, format_)
                     tiles[l][index].append(tile)
                     tile_sizes[l][index].append(len(tile))
-            im = im.resize((im.size[0] >> 1, im.size[1] >> 1) if im.size[0] >> 1 > 0 else (1,1), filter_)
+            im = im.resize((im.size[0] >> 1, im.size[1] >> 1), filter_)
 
         self._all_store_tiles(tiles, tile_sizes, levels, slice_index)
 
@@ -232,13 +230,10 @@ class File:
     def _print_progress(self, slice_index, num_slices):
         """Print the progression on a single line."""
         if self.mpi_comm is None:
-            #sys.stdout.write("\rProgress: %i/%i" % (slice_index+1, num_slices))
             print("\rProgress: %i/%i" % (slice_index+1, num_slices))
         else:
             percent = float(slice_index+1) / num_slices * 100
-            #sys.stdout.write("\rProgress: %i%%" % min(percent, 100))
             print("\rProgress: %i%%" % min(percent, 100))
-        #sys.stdout.flush()
 
     def make_all_stacks(self, source_stack, padding_value,
                         interp, generate_lods):
@@ -250,9 +245,6 @@ class File:
         assert isinstance(source_stack, Stack)
         assert isinstance(padding_value, int)
         assert isinstance(generate_lods, bool)
-
-        #TODO: Progress init
-        #pbar = tqdm.tqdm(total=3)
 
         all_stacks = ['X', 'Y', 'Z']
 
@@ -318,9 +310,6 @@ class File:
 
             self._write_block_to_tiles(block, current_block_range,
                                        left_stack, upper_stack, source_stack)
-            # TODO: Progress checkpoint 1
-            #pbar.update(1)
-
             if self._print_info:
                 self._print_progress(i, len(block_indices))
 
@@ -344,14 +333,8 @@ class File:
         level_offset = 1
         self.write(left_stack.get_level(0), left_stack, padding_value,
                    interp, 0, level_offset)
-        # TODO: Progress checkpoint 2
-        #pbar.update(1)
-
         self.write(upper_stack.get_level(0), upper_stack, padding_value,
                    interp, 0, level_offset)
-        # TODO: Progress checkpoint 3
-        #pbar.update(1)
-        #pbar.close()
 
     def _write_block_to_tiles(self, block, current_block_range,
                               left_stack, upper_stack, source_stack):
