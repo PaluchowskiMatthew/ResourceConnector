@@ -19,6 +19,7 @@
 import nrrd
 import collections
 import numpy as np
+import os
 from optparse import OptionParser
 
 progress = 0
@@ -32,7 +33,7 @@ progress = 0
 # brain region filters - CCFv2
 brain_region_id = 1080
 #filtered_children_ids = set([19, 982, 726, 799, 823, 815, 807, 766, 790, 782, 775, 734, 758, 751, 742, 10702, 632, 10704, 10703, 375, 463, 504, 495, 486, 479, 471, 423, 454, 446, 438, 431, 382, 415, 407, 399, 391])
-filtered_children_ids = set([19])
+filtered_children_ids = set([19]) #TODO unlock all kids
 
 # brain region filters - CCFv2 & CCFv3
 # brain_region_id = 382
@@ -78,12 +79,18 @@ def filter_brain_regions(input_brain_regions, input_gray_levels, input_nissl, ou
     # Create output matrices
     filtered_brain_regions = np.zeros((X_MAX, Y_MAX, Z_MAX))
     out_br_filename = output_folder_path + 'brain_region/' + str(brain_region_id) + '.nrrd'
+    if not os.path.exists(output_folder_path + 'brain_region'):
+        os.makedirs(output_folder_path + 'brain_region')
 
     filtered_nissl = np.zeros((X_MAX, Y_MAX, Z_MAX))
     out_nissl_filename = output_folder_path + 'nissl/' + str(brain_region_id) + '.nrrd'
+    if not os.path.exists(output_folder_path + 'nissl'):
+        os.makedirs(output_folder_path + 'nissl')
 
     filtered_gray_levels = np.zeros((X_MAX, Y_MAX, Z_MAX))
     out_gray_filename = output_folder_path + 'gray_levels/' + str(brain_region_id) + '.nrrd'
+    if not os.path.exists(output_folder_path + 'gray_levels'):
+        os.makedirs(output_folder_path + 'gray_levels')
 
     voxel_count=0
     exported_voxel_count=0
@@ -144,7 +151,6 @@ def parse_options():
                       help="Output folder for extracted data files",
                       action="store", type='string')
 
-    parser.print_help()
     return parser.parse_args()
 
 
@@ -152,8 +158,9 @@ if __name__ == "__main__":
     options, args = parse_options()
 
     if not options.input_brain_regions or not options.input_gray_levels or not options.input_nissl or not options.output_folder_path:
-            print "\n\n ---> Not enough arguments provided! Check usage above."
-            exit()
+        parser.print_help()
+        print "\n\n ---> Not enough arguments provided! Check usage above."
+        exit()
 
     filter_brain_regions(options.input_brain_regions, options.input_gray_levels, options.input_nissl, options.output_folder_path)
 
