@@ -100,7 +100,7 @@ def main():
         stack_index = 1
 
     if args.source_files is None:
-        reader = bbic.File(args.stack_filename, 'r', comm)
+        reader = bbic.File(args.stack_filename, 'a', comm)
         print(reader)
         stack = reader.get_stack(stack_index)
         if stack is None:
