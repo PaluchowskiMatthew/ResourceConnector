@@ -35,7 +35,7 @@ SCRIPT2 = 'brain_region_filtering'
 script_thread = None
 start_time = None
 script_runs = True
-error_output = False
+error_output = False # Use only for debugging since progress output will be omitted
 resource_stdout = 'STDOUT:\n'
 resource_stderr = 'STDERR:\n'
 message = 'Task starting...'
@@ -80,6 +80,8 @@ def status():
     global resource_stderr
     print(resource_stdout)
     print(resource_stderr)
+    #import os
+    #print(os.getcwd())
 
     ### ---------- SCRIPT 1 PROGRESS EXTRATION ---------- ###
     if SCRIPT1 in command:
