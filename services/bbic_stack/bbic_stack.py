@@ -78,6 +78,9 @@ def main():
     parser = create_parser()
     args = parser.parse_args()
 
+    # Append timestamp to filename
+    output_file = args.stack_filename[:-3]+str(start_time)+'.h5'
+
     # Create writer
     if MPI_ENABLED:
         comm = MPI.COMM_WORLD
@@ -100,7 +103,7 @@ def main():
         stack_index = 1
 
     if args.source_files is None:
-        reader = bbic.File(args.stack_filename, 'a', comm)
+        reader = bbic.File(output_file, 'a', comm)
         print(reader)
         stack = reader.get_stack(stack_index)
         if stack is None:
@@ -133,7 +136,7 @@ def main():
             image_source = reader
 
         # Write the target stack
-        writer = bbic.File(args.stack_filename, 'a', comm)
+        writer = bbic.File(output_file, 'a', comm)
         stack = writer.create_stack(stack_index)
         stack.width, stack.height, stack.num_slices = image_source.get_dimensions()
         stack.tile_size = args.tile_size
