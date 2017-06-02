@@ -79,7 +79,7 @@ def main():
     args = parser.parse_args()
 
     # Append timestamp to filename
-    output_file = args.stack_filename[:-3]+str(start_time)+'.h5'
+    output_file = args.stack_filename[:-3]+'_'+str(start_time).replace('.','-')+'.h5'
 
     # Create writer
     if MPI_ENABLED:
