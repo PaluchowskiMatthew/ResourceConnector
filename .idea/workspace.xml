@@ -10,28 +10,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ResourceConnector$Wrapper_local_working_all_stack_short.coverage" NAME="Wrapper local working all stack short Coverage Results" MODIFIED="1496408419809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ResourceConnector$Wrapper_local_working_all_stack_short.coverage" NAME="Wrapper local working all stack short Coverage Results" MODIFIED="1496413530204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ResourceConnector$RC_local_working_all_stack_short.coverage" NAME="RC local working all stack short Coverage Results" MODIFIED="1496413967878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$threadtest.coverage" NAME="threadtest Coverage Results" MODIFIED="1494346392204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_1_stack.coverage" NAME="Wrapper local working 1 stack Coverage Results" MODIFIED="1494519838889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_BBIC_1_stack_mid_.coverage" NAME="Wrapper BBIC 1 stack mid  Coverage Results" MODIFIED="1494936014278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local.coverage" NAME="Wrapper local Coverage Results" MODIFIED="1493990301173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$filter_nrrd_by_brain_regions_args__1_.coverage" NAME="filter_nrrd_by_brain_regions args (1) Coverage Results" MODIFIED="1494926161884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/services/brain_region_filtering" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack.coverage" NAME="Wrapper local working all stack Coverage Results" MODIFIED="1494519083449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_obbic.coverage" NAME="Wrapper local working all stack obbic Coverage Results" MODIFIED="1494516359915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_mid.coverage" NAME="Wrapper local working all stack mid Coverage Results" MODIFIED="1494520710985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_intern.coverage" NAME="Wrapper local intern Coverage Results" MODIFIED="1493990695415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_the_new_guy__1_.coverage" NAME="Wrapper the new guy (1) Coverage Results" MODIFIED="1494316922163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_1_stack_mid.coverage" NAME="Wrapper local working 1 stack mid Coverage Results" MODIFIED="1494935614208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper__1_.coverage" NAME="Wrapper test Coverage Results" MODIFIED="1493977973140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$file.coverage" NAME="file Coverage Results" MODIFIED="1493994041989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_short.coverage" NAME="Wrapper local working all stack short Coverage Results" MODIFIED="1494929967895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$filter_nrrd_by_brain_regions_args.coverage" NAME="filter_nrrd_by_brain_regions args Coverage Results" MODIFIED="1494930507148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/services/brain_region_filtering" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_FILTER.coverage" NAME="Wrapper FILTER Coverage Results" MODIFIED="1494940527669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_the_new_guy.coverage" NAME="Wrapper the new guy Coverage Results" MODIFIED="1494317386075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_short_host.coverage" NAME="Wrapper local working all stack short host Coverage Results" MODIFIED="1494587917531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper.coverage" NAME="Wrapper Coverage Results" MODIFIED="1493738825520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_edits.coverage" NAME="Wrapper local edits Coverage Results" MODIFIED="1494515978210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$subprocesstest.coverage" NAME="subprocesstest Coverage Results" MODIFIED="1494364743884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_1_stack.coverage" NAME="Wrapper local working 1 stack Coverage Results" MODIFIED="1494519838889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_BBIC_1_stack_mid_.coverage" NAME="Wrapper BBIC 1 stack mid  Coverage Results" MODIFIED="1494936014278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local.coverage" NAME="Wrapper local Coverage Results" MODIFIED="1493990301173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_obbic.coverage" NAME="Wrapper local working all stack obbic Coverage Results" MODIFIED="1494516359915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_the_new_guy__1_.coverage" NAME="Wrapper the new guy (1) Coverage Results" MODIFIED="1494316922163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_1_stack_mid.coverage" NAME="Wrapper local working 1 stack mid Coverage Results" MODIFIED="1494935614208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$filter_nrrd_by_brain_regions_args.coverage" NAME="filter_nrrd_by_brain_regions args Coverage Results" MODIFIED="1494930507148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/services/brain_region_filtering" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_the_new_guy.coverage" NAME="Wrapper the new guy Coverage Results" MODIFIED="1494317386075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_short_host.coverage" NAME="Wrapper local working all stack short host Coverage Results" MODIFIED="1494587917531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$filter_nrrd_by_brain_regions.coverage" NAME="filter_nrrd_by_brain_regions Coverage Results" MODIFIED="1494923724487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/services/brain_region_filtering" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_test.coverage" NAME="Wrapper test Coverage Results" MODIFIED="1494316865243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -41,13 +42,13 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="resourceconnector.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="resourceconnector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1728">
-              <caret line="96" column="17" lean-forward="false" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="17" />
+            <state relative-caret-position="452">
+              <caret line="320" column="0" lean-forward="true" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
               <folding>
-                <element signature="e#529#561#0" expanded="true" />
+                <element signature="e#529#570#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbic_stack.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bbic_stack.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic_stack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1314">
-              <caret line="138" column="38" lean-forward="false" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
+            <state relative-caret-position="324">
+              <caret line="83" column="19" lean-forward="true" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -171,11 +172,11 @@
         <option value="$PROJECT_DIR$/wrapper.py" />
         <option value="$PROJECT_DIR$/services/brain_region_filtering/filter_nrrd_by_brain_regions.py" />
         <option value="$PROJECT_DIR$/../ResourceConnector/wrapper.py" />
-        <option value="$PROJECT_DIR$/../ResourceConnector/resourceconnector.py" />
         <option value="$PROJECT_DIR$/../ResourceConnector/tests/dummy_script.py" />
         <option value="$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/file.py" />
         <option value="$PROJECT_DIR$/../ResourceConnector/services/brain_region_filtering/filter_nrrd_by_brain_regions.py" />
         <option value="$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic_stack.py" />
+        <option value="$PROJECT_DIR$/../ResourceConnector/resourceconnector.py" />
       </list>
     </option>
   </component>
@@ -295,7 +296,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Wrapper local working all stack short">
+  <component name="RunManager" selected="Python.RC local working all stack short">
     <configuration default="false" name="filter_nrrd_by_brain_regions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -708,7 +709,25 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <list size="11">
+    <configuration default="false" name="RC local working all stack short" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ResourceConnector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ResourceConnector/resourceconnector.py" />
+      <option name="PARAMETERS" value="--script-command &quot;python3 -u ./services/bbic_stack/bbic_stack.py ../../log/output_v10.h5 --create-from ../../data/bigbrain600/list_short.txt --orientation coronal --all-stacks&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="12">
       <item index="0" class="java.lang.String" itemvalue="Python.Wrapper test" />
       <item index="1" class="java.lang.String" itemvalue="Python.Wrapper local working 1 stack mid" />
       <item index="2" class="java.lang.String" itemvalue="Python.Wrapper BBIC 1 stack mid " />
@@ -718,8 +737,9 @@
       <item index="6" class="java.lang.String" itemvalue="Python.Wrapper local working all stack original bbic" />
       <item index="7" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions args" />
       <item index="8" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions args fail" />
-      <item index="9" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions" />
-      <item index="10" class="java.lang.String" itemvalue="Python.Wrapper local working all stack short" />
+      <item index="9" class="java.lang.String" itemvalue="Python.Wrapper local working all stack short" />
+      <item index="10" class="java.lang.String" itemvalue="Python.RC local working all stack short" />
+      <item index="11" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -818,7 +838,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py</url>
-          <line>302</line>
+          <line>306</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -868,7 +888,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#529#561#0" expanded="true" />
+            <element signature="e#529#570#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -896,7 +916,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#529#561#0" expanded="true" />
+            <element signature="e#529#570#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -934,7 +954,7 @@
         <state relative-caret-position="90">
           <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="33" />
           <folding>
-            <element signature="e#529#561#0" expanded="true" />
+            <element signature="e#529#570#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -965,7 +985,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#529#561#0" expanded="true" />
+            <element signature="e#529#570#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1122,24 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/config/registry_schema.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1728">
-          <caret line="96" column="17" lean-forward="false" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="17" />
-          <folding>
-            <element signature="e#529#561#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
@@ -1158,9 +1160,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic_stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1314">
-          <caret line="138" column="38" lean-forward="false" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
+        <state relative-caret-position="324">
+          <caret line="83" column="19" lean-forward="true" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ResourceConnector/config/registry_schema.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="320" column="0" lean-forward="true" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+          <folding>
+            <element signature="e#529#570#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

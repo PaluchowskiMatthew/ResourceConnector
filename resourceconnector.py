@@ -13,7 +13,7 @@
 #
 ###############################################################################
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from optparse import OptionParser
 
 import threading
@@ -203,8 +203,12 @@ def exit():
              exit: True
     """
 
+    # Shutdown script in subprocess
     global script_runs
     script_runs = False
+
+    # Shutdown flask server
+    shutdown_server()
 
     return jsonify({'exit': not script_runs})
 
@@ -306,6 +310,13 @@ def launch_script(command):
     app.logger.info('Full process output: ' + output)
     print('Full process output: ' + output)
     resource_process.stdin.close()
+
+
+def shutdown_server():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
 
 
 def run_flask(debug=False):
