@@ -1,3 +1,19 @@
+# -*- coding: utf-8 -*-
+
+###############################################################################
+#
+# Code related to EPFL Master Semester Project:
+# "A job management web service for cluster-based processing in Brain Atlasing"
+#
+# Version 1.0, 02 June 2017
+#
+# Copyright (c) 2017, Blue Brain Project
+#                     Mateusz Paluchowski <mateusz.paluchowski@epfl.ch>
+#                     Christian Tresch <christian.tresch@epfl.ch>
+#
+# This file is based on the original filter_nrrd_by_brain_regions.py script
+# created by Samuel Kerrien of the Blue Brain Project
+#
 #
 # This script is used to filter a set of NRRD files by brain regions.
 # usage: python filter_nrrd_by_brain_regions.py -r <input_brain_regions.nrrd> -g <input_gray_levels.nrrd> -n <input_nissl.nrrd> -o <output_folder_path>
@@ -14,7 +30,7 @@
 # voxels: 1,414,313 / 76,899,840
 # voxels exported by region Counter({'382': 555065, '463': 354791, '10703': 257103, '632': 101404, '423': 88966, '10704': 51187, '982': 4025, '19': 1772})
 #
-########################################################################################################################
+#################################################################################
 
 import nrrd
 import collections
@@ -32,8 +48,7 @@ progress = 0
 
 # brain region filters - CCFv2
 brain_region_id = 1080
-#filtered_children_ids = set([19, 982, 726, 799, 823, 815, 807, 766, 790, 782, 775, 734, 758, 751, 742, 10702, 632, 10704, 10703, 375, 463, 504, 495, 486, 479, 471, 423, 454, 446, 438, 431, 382, 415, 407, 399, 391])
-filtered_children_ids = set([19]) #TODO unlock all kids
+filtered_children_ids = set([19, 982, 726, 799, 823, 815, 807, 766, 790, 782, 775, 734, 758, 751, 742, 10702, 632, 10704, 10703, 375, 463, 504, 495, 486, 479, 471, 423, 454, 446, 438, 431, 382, 415, 407, 399, 391])
 
 # brain region filters - CCFv2 & CCFv3
 # brain_region_id = 382

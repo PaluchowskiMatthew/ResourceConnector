@@ -1,19 +1,29 @@
-from flask import Flask, jsonify
-#from flasgger import Swagger
+# -*- coding: utf-8 -*-
 
+###############################################################################
+#
+# Code related to EPFL Master Semester Project:
+# "A job management web service for cluster-based processing in Brain Atlasing"
+#
+# Version 1.0, 02 June 2017
+#
+# Copyright (c) 2017, Blue Brain Project
+#                     Mateusz Paluchowski <mateusz.paluchowski@epfl.ch>
+#                     Christian Tresch <christian.tresch@epfl.ch>
+#
+###############################################################################
+
+from flask import Flask, jsonify
 from optparse import OptionParser
 
 import threading
 import subprocess
 import json
-import socket
 import time
 
-
 WRAPPER_NAME = 'resourceconnector'
-SCHEMA_FILE = 'wrapper_schema.json'
+SCHEMA_FILE = 'config/registry_schema.json'
 app = Flask(__name__)
-#Swagger(app)
 
 
 '''---------- SCRIPT DEFINITIONS ----------'''
@@ -25,17 +35,18 @@ SCRIPT2 = 'brain_region_filtering'
 script_thread = None
 start_time = None
 script_runs = True
-script_command = 'No command!'
+error_output = False
 resource_stdout = 'STDOUT:\n'
 resource_stderr = 'STDERR:\n'
 message = 'Task starting...'
+script_command = 'Command empty!'
 progress = 0
 
 
 '''---------- API ROUTE DEFINITIONS ----------'''
 @app.route("/")
 def hello():
-    return "Welcome to the World Wide Wrapper!"
+    return "API v1.0 to the ResourceConnector module of the Blue Brain Project"
 
 
 @app.route('/'+WRAPPER_NAME+'/v1/registry')
@@ -63,8 +74,8 @@ def status():
     global message
     global progress
 
-    command = script_command[0]
     # Read script output
+    command = script_command[0]
     global resource_stdout
     global resource_stderr
     print(resource_stdout)
@@ -192,7 +203,6 @@ def exit():
              exit: True
     """
 
-    #TODO shutdown script gracefully
     global script_runs
     script_runs = False
 
@@ -263,10 +273,9 @@ def launch_script(command):
     :param command: script which should be run inside the shell
     """
     global script_runs
+    global error_output
     global resource_stdout
     global resource_stderr
-    #global process #TODO still needed?
-    #command = command[0]
 
     app.logger.info('Full command: ' + command)
     print('Full command: ' + command)
@@ -288,12 +297,10 @@ def launch_script(command):
         if out_line != '':
             resource_stdout = resource_stdout + out_line
 
-        if False:
-            err_line = resource_process.stderr.readline().decode('utf-8')  # TODO problematic line for duplicate output file detection
+        if error_output:  # only to be used for debugging purposes
+            err_line = resource_process.stderr.readline().decode('utf-8')
             if err_line != '':
                 resource_stderr = resource_stderr + err_line
-
-        #time.sleep(1) #TODO seems to reduce performance
 
     output = resource_process.communicate()[0].decode('utf-8')
     app.logger.info('Full process output: ' + output)
@@ -314,7 +321,7 @@ def run_flask(debug=False):
         port = options.port
         host = options.host
 
-    app.run(host=host, port=port, debug=debug)
+    app.run(host=host, port=port, debug=False) #NOT to be run in debug mode, since additional threads interfere with shared variables
 
 
 if __name__ == "__main__":
@@ -324,7 +331,7 @@ if __name__ == "__main__":
     script_thread = threading.Thread(name='Resource-Script-Thread', target=launch_script, args=script_command)
     script_thread.start()
 
-    run_flask(debug=False) #NOT to be run in debug mode, since additional threads interfere with shared variables
-    script_thread.join() #TODO is this needed?
+    run_flask(debug=False)
+    script_thread.join()
 
 

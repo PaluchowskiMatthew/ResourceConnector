@@ -1,6 +1,7 @@
 # BBIC file reader
-# Author: Jafet Villafranca, 2016
-#         Raphael Dumusc,    2015
+# Author: Jafet Villafranca,                        2016
+#         Raphael Dumusc,                           2015
+#          Christian Tresch, Mateusz Paluchowski    2017
 #
 # Copyright (c) BBP/EPFL 2014-2015; All rights reserved.
 # Do not distribute without further notice.
