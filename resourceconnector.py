@@ -108,6 +108,7 @@ def status():
                 print(message)
                 print('Time taken: '+str(time.clock()-start_time))
                 script_runs = False
+                exit()
             elif out[-2][0:11] == '\rProgress: ':
                 # Task is partially done
                 last_line = out[-2]
@@ -131,6 +132,7 @@ def status():
                 print(message)
                 print('Time taken: '+str(time.clock()-start_time))
                 script_runs = False
+                exit()
             elif out[-2][0:11] == '\rProgress: ':
                 # Task is partially done
                 last_line = out[-2]
@@ -156,6 +158,8 @@ def status():
             message = 'Task in progress...'
             if progress == 100:
                 message = 'Task is done.'
+                script_runs = False
+                exit()
         else:
             # Intermediary progress state. Return last known progress
             message = 'Task starting...'
