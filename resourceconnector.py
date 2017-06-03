@@ -20,6 +20,8 @@ import threading
 import subprocess
 import json
 import time
+import signal
+import os
 
 WRAPPER_NAME = 'resourceconnector'
 SCHEMA_FILE = 'config/registry_schema.json'
@@ -32,6 +34,7 @@ SCRIPT2 = 'brain_region_filtering'
 
 
 '''---------- GLOBALS ----------'''
+resource_process = None
 script_thread = None
 start_time = None
 script_runs = True
@@ -209,6 +212,10 @@ def exit():
     global script_runs
     script_runs = False
 
+    # Shutdown eventually running script
+    global resource_process
+    os.kill(resource_process.pid, signal.SIGTERM)  # Send the signal to all the process groups spawned
+
     # Shutdown flask server
     shutdown_server()
 
@@ -278,6 +285,7 @@ def launch_script(command):
     Method for script/command launching inside the shell
     :param command: script which should be run inside the shell
     """
+    global  resource_process
     global script_runs
     global error_output
     global resource_stdout

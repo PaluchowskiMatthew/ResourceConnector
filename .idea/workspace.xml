@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61af5004-065e-4fb6-881c-5c5892103641" name="Default" comment="" />
+    <list default="true" id="61af5004-065e-4fb6-881c-5c5892103641" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ResourceConnector.iml" afterPath="$PROJECT_DIR$/.idea/ResourceConnector.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resourceconnector.py" afterPath="$PROJECT_DIR$/resourceconnector.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,14 +16,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ResourceConnector$Wrapper_local_working_all_stack_short.coverage" NAME="Wrapper local working all stack short Coverage Results" MODIFIED="1496413530204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ResourceConnector$RC_local_working_all_stack_short.coverage" NAME="RC local working all stack short Coverage Results" MODIFIED="1496416264314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../ResourceConnector" />
+    <SUITE FILE_PATH="coverage/ResourceConnector$RC_local_working_all_stack_short.coverage" NAME="RC local working all stack short Coverage Results" MODIFIED="1496416264314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$threadtest.coverage" NAME="threadtest Coverage Results" MODIFIED="1494346392204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$filter_nrrd_by_brain_regions_args__1_.coverage" NAME="filter_nrrd_by_brain_regions args (1) Coverage Results" MODIFIED="1494926161884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/services/brain_region_filtering" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack.coverage" NAME="Wrapper local working all stack Coverage Results" MODIFIED="1494519083449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_mid.coverage" NAME="Wrapper local working all stack mid Coverage Results" MODIFIED="1494520710985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_intern.coverage" NAME="Wrapper local intern Coverage Results" MODIFIED="1493990695415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper__1_.coverage" NAME="Wrapper test Coverage Results" MODIFIED="1493977973140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Wrapper$file.coverage" NAME="file Coverage Results" MODIFIED="1493994041989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic" />
+    <SUITE FILE_PATH="coverage/Wrapper$file.coverage" NAME="file Coverage Results" MODIFIED="1493994041989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Wrapper/bbic" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_short.coverage" NAME="Wrapper local working all stack short Coverage Results" MODIFIED="1494929967895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_FILTER.coverage" NAME="Wrapper FILTER Coverage Results" MODIFIED="1494940527669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper.coverage" NAME="Wrapper Coverage Results" MODIFIED="1493738825520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -27,6 +32,7 @@
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_1_stack.coverage" NAME="Wrapper local working 1 stack Coverage Results" MODIFIED="1494519838889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_BBIC_1_stack_mid_.coverage" NAME="Wrapper BBIC 1 stack mid  Coverage Results" MODIFIED="1494936014278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local.coverage" NAME="Wrapper local Coverage Results" MODIFIED="1493990301173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ResourceConnector$RC_local_working_all_stack_mid.coverage" NAME="RC local working all stack mid Coverage Results" MODIFIED="1496489950672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_all_stack_obbic.coverage" NAME="Wrapper local working all stack obbic Coverage Results" MODIFIED="1494516359915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_the_new_guy__1_.coverage" NAME="Wrapper the new guy (1) Coverage Results" MODIFIED="1494316922163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Wrapper$Wrapper_local_working_1_stack_mid.coverage" NAME="Wrapper local working 1 stack mid Coverage Results" MODIFIED="1494935614208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -42,20 +48,28 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="resourceconnector.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py">
+      <file leaf-file-name="resourceconnector.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resourceconnector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4812">
-              <caret line="37" column="61" lean-forward="false" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
-              <folding>
-                <element signature="e#529#570#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="829">
+              <caret line="228" column="18" lean-forward="true" selection-start-line="228" selection-start-column="18" selection-end-line="228" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="posix.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/-1941571183/posix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="661">
+              <caret line="460" column="4" lean-forward="false" selection-start-line="460" selection-start-column="4" selection-end-line="460" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="registry_schema.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ResourceConnector/config/registry_schema.json">
+        <entry file="file://$PROJECT_DIR$/config/registry_schema.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="17" />
@@ -64,21 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bbic_stack.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic_stack.py">
+      <file leaf-file-name="bbic_stack.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic_stack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="1242">
+              <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="file.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/file.py">
+        <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+            <state relative-caret-position="828">
+              <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -87,7 +101,7 @@
       <file leaf-file-name="files.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/h5py/_hl/files.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
+            <state relative-caret-position="3906">
               <caret line="231" column="8" lean-forward="false" selection-start-line="231" selection-start-column="8" selection-end-line="231" selection-end-column="8" />
               <folding />
             </state>
@@ -95,9 +109,9 @@
         </entry>
       </file>
       <file leaf-file-name="filter_nrrd_by_brain_regions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/brain_region_filtering/filter_nrrd_by_brain_regions.py">
+        <entry file="file://$PROJECT_DIR$/services/brain_region_filtering/filter_nrrd_by_brain_regions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="576">
               <caret line="32" column="81" lean-forward="false" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
               <folding>
                 <element signature="e#1427#1438#0" expanded="true" />
@@ -161,22 +175,22 @@
         <option value="$PROJECT_DIR$/wrapper_schema.json" />
         <option value="$PROJECT_DIR$/tools/bbic/bbic_stack.py" />
         <option value="$PROJECT_DIR$/bbic_stack.py" />
-        <option value="$PROJECT_DIR$/resourceconnector.py" />
         <option value="$PROJECT_DIR$/threadtest.py" />
         <option value="$PROJECT_DIR$/subprocesstest.py" />
-        <option value="/mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/__init__.py" />
-        <option value="/mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/file.py" />
-        <option value="/mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/stack.py" />
+        <option value="$PROJECT_DIR$/../Wrapper/bbic/__init__.py" />
+        <option value="$PROJECT_DIR$/../Wrapper/bbic/file.py" />
+        <option value="$PROJECT_DIR$/../Wrapper/bbic/stack.py" />
         <option value="$PROJECT_DIR$/bbic/file.py" />
         <option value="$PROJECT_DIR$/bbic/__init__.py" />
         <option value="$PROJECT_DIR$/wrapper.py" />
         <option value="$PROJECT_DIR$/services/brain_region_filtering/filter_nrrd_by_brain_regions.py" />
-        <option value="$PROJECT_DIR$/../ResourceConnector/wrapper.py" />
-        <option value="$PROJECT_DIR$/../ResourceConnector/tests/dummy_script.py" />
-        <option value="$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/file.py" />
-        <option value="$PROJECT_DIR$/../ResourceConnector/services/brain_region_filtering/filter_nrrd_by_brain_regions.py" />
-        <option value="$PROJECT_DIR$/../ResourceConnector/resourceconnector.py" />
-        <option value="$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic_stack.py" />
+        <option value="$PROJECT_DIR$/wrapper.py" />
+        <option value="$PROJECT_DIR$/tests/dummy_script.py" />
+        <option value="$PROJECT_DIR$/services/bbic_stack/bbic/file.py" />
+        <option value="$PROJECT_DIR$/services/brain_region_filtering/filter_nrrd_by_brain_regions.py" />
+        <option value="$PROJECT_DIR$/services/bbic_stack/bbic_stack.py" />
+        <option value="$PROJECT_DIR$/resourceconnector.py" />
+        <option value="$PROJECT_DIR$/resourceconnector.py" />
       </list>
     </option>
   </component>
@@ -188,8 +202,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="width" value="1922" />
-    <option name="height" value="1080" />
+    <option name="width" value="3842" />
+    <option name="height" value="2133" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -206,7 +220,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,7 +285,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +310,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.RC local working all stack short">
+  <component name="RunManager" selected="Python.RC local working all stack mid">
     <configuration default="false" name="filter_nrrd_by_brain_regions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -529,6 +543,24 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="ResourceConnector" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ResourceConnector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resourceconnector.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="Wrapper test" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -612,7 +644,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Wrapper" />
+      <module name="ResourceConnector" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wrapper.py" />
       <option name="PARAMETERS" value="--script-command &quot;python -u bbic_stack.py ../../log/output_v03.h5 --create-from ../../data/bigbrain600/list_mid.txt --orientation coronal --all-stacks&quot;" />
@@ -704,7 +736,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ResourceConnector" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ResourceConnector/resourceconnector.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resourceconnector.py" />
       <option name="PARAMETERS" value="--script-command &quot;python -u bbic_stack.py ../../log/output_v03.h5 --create-from ../../data/bigbrain600/list_short.txt --orientation coronal --all-stacks&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -716,30 +748,50 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../ResourceConnector" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ResourceConnector" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../ResourceConnector/resourceconnector.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resourceconnector.py" />
       <option name="PARAMETERS" value="--script-command &quot;python -u services/bbic_stack/bbic_stack.py ../../log/output_v10.h5 --create-from ../../data/bigbrain600/list_short.txt --orientation coronal --all-stacks&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <list size="12">
-      <item index="0" class="java.lang.String" itemvalue="Python.Wrapper test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Wrapper local working 1 stack mid" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Wrapper BBIC 1 stack mid " />
-      <item index="3" class="java.lang.String" itemvalue="Python.Wrapper FILTER" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Wrapper local working all stack mid" />
-      <item index="5" class="java.lang.String" itemvalue="Python.Wrapper local working all stack short host" />
-      <item index="6" class="java.lang.String" itemvalue="Python.Wrapper local working all stack original bbic" />
-      <item index="7" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions args" />
-      <item index="8" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions args fail" />
-      <item index="9" class="java.lang.String" itemvalue="Python.Wrapper local working all stack short" />
-      <item index="10" class="java.lang.String" itemvalue="Python.RC local working all stack short" />
-      <item index="11" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions" />
+    <configuration default="false" name="RC local working all stack mid" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ResourceConnector" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resourceconnector.py" />
+      <option name="PARAMETERS" value="--script-command &quot;python -u services/bbic_stack/bbic_stack.py ../../log/output_v10.h5 --create-from ../../data/bigbrain600/list_mid.txt --orientation coronal --all-stacks&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="14">
+      <item index="0" class="java.lang.String" itemvalue="Python.ResourceConnector" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Wrapper test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Wrapper local working 1 stack mid" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Wrapper BBIC 1 stack mid " />
+      <item index="4" class="java.lang.String" itemvalue="Python.Wrapper FILTER" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Wrapper local working all stack mid" />
+      <item index="6" class="java.lang.String" itemvalue="Python.Wrapper local working all stack short host" />
+      <item index="7" class="java.lang.String" itemvalue="Python.Wrapper local working all stack original bbic" />
+      <item index="8" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions args" />
+      <item index="9" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions args fail" />
+      <item index="10" class="java.lang.String" itemvalue="Python.Wrapper local working all stack short" />
+      <item index="11" class="java.lang.String" itemvalue="Python.RC local working all stack short" />
+      <item index="12" class="java.lang.String" itemvalue="Python.RC local working all stack mid" />
+      <item index="13" class="java.lang.String" itemvalue="Python.filter_nrrd_by_brain_regions" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -770,19 +822,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1080" extended-state="6" />
+    <frame x="-1" y="0" width="3842" height="2133" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09541381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18769552" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33993745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38998958" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19210246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16202784" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38998958" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39728883" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -791,6 +842,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3493222" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
@@ -827,23 +879,23 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/stack.py</url>
+          <url>file://$PROJECT_DIR$/../Wrapper/bbic/stack.py</url>
           <line>267</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../ResourceConnector/services/brain_region_filtering/filter_nrrd_by_brain_regions.py</url>
+          <url>file://$PROJECT_DIR$/services/brain_region_filtering/filter_nrrd_by_brain_regions.py</url>
           <line>172</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py</url>
-          <line>308</line>
+          <url>file://$PROJECT_DIR$/resourceconnector.py</url>
+          <line>316</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py</url>
-          <line>151</line>
+          <url>file://$PROJECT_DIR$/resourceconnector.py</url>
+          <line>154</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
@@ -875,49 +927,42 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/file.py" />
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/file.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4212">
           <caret line="239" column="57" lean-forward="false" selection-start-line="239" selection-start-column="57" selection-end-line="239" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py">
+    <entry file="file://$PROJECT_DIR$/resourceconnector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#529#570#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic_stack.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic_stack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1458">
           <caret line="83" column="13" lean-forward="false" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="13" />
-          <folding>
-            <element signature="e#381#390#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/file.py" />
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/file.py">
+    <entry file="file://$PROJECT_DIR$/../Wrapper/bbic/file.py" />
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4212">
           <caret line="239" column="57" lean-forward="true" selection-start-line="239" selection-start-column="57" selection-end-line="239" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py">
+    <entry file="file://$PROJECT_DIR$/resourceconnector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#529#570#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -928,76 +973,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/config/registry_schema.json">
+    <entry file="file://$PROJECT_DIR$/config/registry_schema.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/tests/script_command_dummy_test.py">
+    <entry file="file://$PROJECT_DIR$/tests/script_command_dummy_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/README.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py">
+    <entry file="file://$PROJECT_DIR$/resourceconnector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="e#529#570#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/config/registry_schema.json">
+    <entry file="file://$PROJECT_DIR$/config/registry_schema.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/tests/script_command_dummy_test.py">
+    <entry file="file://$PROJECT_DIR$/tests/script_command_dummy_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/README.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py">
+    <entry file="file://$PROJECT_DIR$/resourceconnector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#529#570#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/README.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/README.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
@@ -1020,7 +1061,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/bbic/file.py" />
     <entry file="file://$PROJECT_DIR$/tools/bbic/file.py" />
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/block_provider.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/block_provider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1041,7 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="753" column="0" lean-forward="false" selection-start-line="753" selection-start-column="0" selection-end-line="753" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,32 +1094,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/file_orig.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/file_orig.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31">
           <caret line="133" column="26" lean-forward="false" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/__init__.py" />
-    <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/file.py" />
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/stack.py">
+    <entry file="file://$PROJECT_DIR$/../Wrapper/bbic/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../Wrapper/bbic/file.py" />
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/stack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///mnt/DATA/Dropbox/EPFL/17fs/Semesterproject/code/Wrapper/bbic/stack.py" />
+    <entry file="file://$PROJECT_DIR$/../Wrapper/bbic/stack.py" />
     <entry file="file://$USER_HOME$/anaconda3/envs/py27/lib/python2.7/optparse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="1007" column="8" lean-forward="false" selection-start-line="1007" selection-start-column="8" selection-end-line="1007" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/image_utils.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/image_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
@@ -1088,31 +1127,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/time" />
     <entry file="file://$PROJECT_DIR$/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic_volume.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic_volume.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/__init__.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding>
-            <element signature="e#238#260#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/file_cluster.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/file_cluster.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4248">
           <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
-          <folding>
-            <element signature="e#191#202#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1120,21 +1152,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28296">
           <caret line="1597" column="0" lean-forward="false" selection-start-line="1597" selection-start-column="0" selection-end-line="1597" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/tests/script_command_dummy_test.py">
+    <entry file="file://$PROJECT_DIR$/tests/script_command_dummy_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/brain_region_filtering/filter_nrrd_by_brain_regions.py">
+    <entry file="file://$PROJECT_DIR$/services/brain_region_filtering/filter_nrrd_by_brain_regions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="576">
           <caret line="32" column="81" lean-forward="false" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
           <folding>
             <element signature="e#1427#1438#0" expanded="true" />
@@ -1142,23 +1172,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic/file.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic/file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        <state relative-caret-position="828">
+          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/h5py/_hl/files.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
+        <state relative-caret-position="3906">
           <caret line="231" column="8" lean-forward="false" selection-start-line="231" selection-start-column="8" selection-end-line="231" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/config/registry_schema.json">
+    <entry file="file://$PROJECT_DIR$/config/registry_schema.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="17" />
@@ -1166,20 +1196,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/resourceconnector.py">
+    <entry file="file://$PROJECT_DIR$/services/bbic_stack/bbic_stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4812">
-          <caret line="37" column="61" lean-forward="false" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
-          <folding>
-            <element signature="e#529#570#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1242">
+          <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ResourceConnector/services/bbic_stack/bbic_stack.py">
+    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/-1941571183/posix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="661">
+          <caret line="460" column="4" lean-forward="false" selection-start-line="460" selection-start-column="4" selection-end-line="460" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resourceconnector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="228" column="18" lean-forward="true" selection-start-line="228" selection-start-column="18" selection-end-line="228" selection-end-column="18" />
           <folding />
         </state>
       </provider>
