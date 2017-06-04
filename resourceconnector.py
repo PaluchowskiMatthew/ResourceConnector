@@ -35,6 +35,7 @@ SCRIPT2 = 'brain_region_filtering'
 
 '''---------- GLOBALS ----------'''
 resource_process = None
+resource_process_pid = None
 script_thread = None
 start_time = None
 script_runs = True
@@ -217,8 +218,16 @@ def exit():
     script_runs = False
 
     # Shutdown eventually running script
-    global resource_process
-    os.kill(resource_process.pid, signal.SIGTERM)  # Send the signal to all the process groups spawned
+    global resource_process_pid
+    print('###PID on exit: '+str(resource_process_pid))
+    print('###PIDeval on exit: '+str(resource_process.pid))
+    print('###GPID on exit: ' + str(os.getpgid(resource_process_pid)))
+
+    os.killpg(os.getpgid(resource_process_pid), signal.SIGTERM)  # Send the signal to all the process groups spawned
+
+    # Shutdown eventually script thread
+    #global resource_process
+    #os.kill(resource_process.pid, signal.SIGTERM)  # Send the signal to all the process groups spawned
 
     # Shutdown flask server
     shutdown_server()
@@ -289,7 +298,8 @@ def launch_script(command):
     Method for script/command launching inside the shell
     :param command: script which should be run inside the shell
     """
-    global  resource_process
+    global resource_process
+    global resource_process_pid
     global script_runs
     global error_output
     global resource_stdout
@@ -306,10 +316,18 @@ def launch_script(command):
         shell=True,
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE)
+        stderr=subprocess.PIPE,
+        preexec_fn=os.setsid
+    )
+
+    resource_process_pid = resource_process.pid
+    print('###PID on creation_ '+str(resource_process_pid))
 
     # Poll process for new output until finished
     while script_runs:
+        #print('###PID in loop: ' + str(os.getpid()))
+        #print('###PPID in loop: ' + str(os.getppid()))
+        #print('###GPID in loop: ' + str(os.getpgid(os.getpid())))
         out_line = resource_process.stdout.readline().decode('utf-8')
 
         if out_line != '':
@@ -319,6 +337,9 @@ def launch_script(command):
             err_line = resource_process.stderr.readline().decode('utf-8')
             if err_line != '':
                 resource_stderr = resource_stderr + err_line
+
+        time.sleep(1)
+
 
     output = resource_process.communicate()[0].decode('utf-8')
     app.logger.info('Full process output: ' + output)
@@ -357,6 +378,6 @@ if __name__ == "__main__":
     script_thread.start()
 
     run_flask(debug=False)
-    script_thread.join()
+    #script_thread.join()
 
 
